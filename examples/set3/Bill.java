@@ -5,12 +5,11 @@
  */
 package examples.set3;
 
+import java.util.Arrays;
+import java.util.List;
 import wagu.Block;
 import wagu.Board;
 import wagu.Table;
-
-import java.util.Arrays;
-import java.util.List;
 
 /**
  *

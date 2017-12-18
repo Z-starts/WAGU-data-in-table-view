@@ -9,7 +9,6 @@ package examples.set2;
 import wagu.Block;
 import wagu.Board;
 import wagu.Table;
-
 import java.util.Arrays;
 import java.util.List;
 
