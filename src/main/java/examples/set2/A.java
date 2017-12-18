@@ -6,8 +6,6 @@
 
 package examples.set2;
 
-import wagu.Board;
-import wagu.Table;
 import wagu.TableHelper;
 
 import java.util.ArrayList;
@@ -33,10 +31,7 @@ public class A {
                 Arrays.asList("Alyse", "Female", "No", "26", "7000.89"),
                 Arrays.asList("Venessa", "Female", "No", "22", "100700.50")
         );
-        Board board = new Board(75);
-        String tableString = board.setInitialBlock(new Table(board, 75, headersList, rowsList).tableToBlocks()).build()
-                .getPreview();
-        System.out.println(tableString);
+        TableHelper.getInstance().print(headersList, rowsList, 75, 75);
 
         List<BeanA> rowsList2 = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
@@ -49,7 +44,8 @@ public class A {
             rowsList2.add(a);
         }
 
-        TableHelper.getInstance().printOut(headersList, rowsList2, 200, 100);
+
+        TableHelper.getInstance().printObjOut(headersList, rowsList2, 200, 100);
     }
 
 

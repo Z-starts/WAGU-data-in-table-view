@@ -18,7 +18,17 @@ public class TableHelper {
     private TableHelper() {
     }
 
-    public void printOut(List<String> headersList, List<?> rowsList, int boardWidth, int tableWidth) {
+    public void print(List<String> headersList, List<List<String>> rowsList, int boardWidth, int tableWidth) {
+        Board board = new Board(boardWidth);
+        String tableString2 = board
+                .setInitialBlock(new Table(board, tableWidth, headersList,
+                        rowsList)
+                        .tableToBlocks()).build()
+                .getPreview();
+        System.out.println(tableString2);
+    }
+
+    public void printObjOut(List<String> headersList, List<?> rowsList, int boardWidth, int tableWidth) {
         Board board = new Board(boardWidth);
         String tableString2 = board
                 .setInitialBlock(new Table(board, tableWidth, headersList,
