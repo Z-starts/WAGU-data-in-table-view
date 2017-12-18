@@ -29,13 +29,7 @@ public class TableHelper {
     }
 
     public void printObjOut(List<String> headersList, List<?> rowsList, int boardWidth, int tableWidth) {
-        Board board = new Board(boardWidth);
-        String tableString2 = board
-                .setInitialBlock(new Table(board, tableWidth, headersList,
-                        BeanConverter.CONVERTER.convert2TableLine(rowsList))
-                        .tableToBlocks()).build()
-                .getPreview();
-        System.out.println(tableString2);
+        print(headersList, BeanConverter.CONVERTER.convert2TableLine(rowsList), boardWidth, tableWidth);
     }
 
 }
