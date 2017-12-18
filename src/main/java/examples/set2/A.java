@@ -45,7 +45,7 @@ public class A {
         }
 
 
-        TableHelper.getInstance().printObjOut(headersList, rowsList2, 200, 100);
+        TableHelper.getInstance().printObjList(headersList, rowsList2, 200, 100);
     }
 
 
